@@ -65,7 +65,7 @@ func (d *Database) ValidateCommand(command string) error {
 func (d *Database) PerformDbOperations(command string) string {
 	splits := strings.Split(command, " ")
 	operation := splits[0]
-	var response string = ""
+	var response = ""
 	if operation == "GET" {
 		key := splits[1]
 		val, err := d.getKey(key)
